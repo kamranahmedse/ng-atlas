@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularMaps">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Maps</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="vendor/twitter-bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/twitter-bootstrap/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="vendor/ui-select/select.min.css">
+
+	<!-- Vendor JS files -->
+	<script src="vendor/angular/angular.min.js"></script>
+	<script src="vendor/ui-router/angular-ui-router.js"></script>
+	<script src="vendor/ui-bootstrap/ui-bootstrap-0.14.3.min.js"></script>
+	<script src="vendor/ui-select/select.min.js"></script>
+
+	<!-- Basic app related configuration stuff -->
+	<script src="app/app.js"></script>
+	<script src="app/config.js"></script>
+	<script src="app/services/HttpInterceptor.js"></script>
+
+	<!-- Directives -->
+	<script src="app/directives/Loader.js"></script>
+
+	<!-- Controllers -->
+	<script src="app/controllers/HomeCtrl.js"></script>
+	<script src="app/controllers/ExploreCtrl.js"></script>
+	<script src="app/controllers/AboutCtrl.js"></script>
+
+
+	<!-- Services -->
+	<script src="app/services/Country.js"></script>
+
+
+</head>
+<body>
+	<div loader></div>
+
+	<div ng-include src="'views/partials/top-nav.html'"></div>
+	
+	<div class="container">
+		
+		<div ui-view></div>
+
+	</div>
+
+</body>
+</html>

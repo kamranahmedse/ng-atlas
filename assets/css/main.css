@@ -1,0 +1,4 @@
+body { padding-top: 70px; }
+.loader-progress {margin-top: -20px; }
+.loader-progress .progress { border-radius: 0; }
+.loader-progress .progress-bar {width:100%; border-radius: 0;}

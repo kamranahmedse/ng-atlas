@@ -1,0 +1,18 @@
+<h1>Search</h1>
+
+<p>Start typing the name of the country to get several details regarding it including the current statistics, twitter trends, map, weather, currency etc.</p>
+
+<ui-select ng-model="home.search.selected" on-select='home.getCountry($item)'>
+    <ui-select-match placeholder="Select the country" allow-clear>
+        <span ng-bind="$select.selected.name"></span>
+    </ui-select-match>
+    <ui-select-choices repeat="country in (home.search.countries | filter: $select.search) track by country.code">
+        <span ng-bind="country.name"></span>
+    </ui-select-choices>
+</ui-select>
+
+<br>
+
+<div class="search-results" ng-show="home.search.selected">
+	<h4>You selected <strong>{{ home.search.selected.name || '-	' }}!</strong></h4>
+</div>
