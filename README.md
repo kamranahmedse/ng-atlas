@@ -18,10 +18,10 @@ The app uses the following:
 
 There are a few controllers, some nested views, a service, an HTTP Interceptor and a directive for the loader.
 
-## How does it look like?
+## How to Setup?
 
-![Detail page](http://i.imgur.com/dzAbvLM.png)
-![Map Page](http://i.imgur.com/IOfMPzV.png)
+Simply clone the repository and access the `index.html` in the route directory through your browser. 
+
 
 ## What is missing?
 
