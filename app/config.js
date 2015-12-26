@@ -1,4 +1,7 @@
-app.config(function ( $stateProvider) {
+app.config(function ( $stateProvider, $urlRouterProvider ) {
+
+ 	$urlRouterProvider.otherwise("/index");
+
 	$stateProvider
 		.state('index', {
 			url: "",
@@ -9,6 +12,16 @@ app.config(function ( $stateProvider) {
 			url: "/",
 			controller: 'HomeCtrl as home',
 			templateUrl: 'views/home.html'
+		})
+		.state('index.country', {
+			url: "/country/{name}",
+			controller: 'CountryCtrl as country',
+			templateUrl: 'views/partials/country/basic-detail.html'	
+		})
+		.state('index.map', {
+			url: "/country/{name}/map",
+			controller: 'CountryCtrl as country',
+			templateUrl: 'views/partials/country/map.html'	
 		})
 		.state('explore', {
 			url: "/explore",

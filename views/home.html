@@ -2,7 +2,7 @@
 
 <p>Start typing the name of the country to get several details regarding it including the current statistics, twitter trends, map, weather, currency etc.</p>
 
-<ui-select ng-model="home.search.selected" on-select='home.getCountry($item)'>
+<ui-select ng-model="home.search.selected" on-select='home.loadCountry($item)'>
     <ui-select-match placeholder="Select the country" allow-clear>
         <span ng-bind="$select.selected.name"></span>
     </ui-select-match>
@@ -11,8 +11,22 @@
     </ui-select-choices>
 </ui-select>
 
-<br>
-
-<div class="search-results" ng-show="home.search.selected">
+<div class="search-results top17" ng-show="home.search.selected">
 	<h4>You selected <strong>{{ home.search.selected.name || '-	' }}!</strong></h4>
+	
+	<p>Click any of the links below to show the information relevant to the country</p><br>
+	
+	<div class="container">
+		<div class="row">
+			<ul class="nav nav-pills">
+			  <li ui-sref-active="active"><a ui-sref="index.country({name: home.search.selected.name})" ui-sref-opts="{ absolute: true }">Basic Detail</a></li>
+			  <li ui-sref-active="active"><a ui-sref="index.map({name: home.search.selected.name})" ui-sref-opts="{ absolute: true }">Map</a></li>
+			</ul>
+		</div>
+
+		<div class="row top30">
+			<div ui-view></div>
+		</div>
+	</div>	
+
 </div>
