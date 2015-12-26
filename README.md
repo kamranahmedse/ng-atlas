@@ -1,10 +1,8 @@
 # Angular Atlas
 
+A little weekend project to jolt my knowlege of Angular JS of a few things.
+
 Demo: http://ng-atlas.herokuapp.com/
-
-## What is it?
-
-It is a simple weekend project that I developed in order to quickly jolt my Angular JS knowlege of a few things. You can search a country and get several details regarding the country and check the map.
 
 ## What is it made of?
 
