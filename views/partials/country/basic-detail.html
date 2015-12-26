@@ -1,0 +1,65 @@
+<div class="row">
+
+		<table class="table table-striped table-hover">
+			<tr>
+				<th>Name</th>
+				<td>{{ countryCtrl.selected.name }}</td>
+			</tr>
+			<tr>
+				<th>Capital</th>
+				<td>{{ countryCtrl.selected.capital }}</td>
+			</tr>
+			<tr>
+				<th>Alternate Names/Spellings</th>
+				<td>
+					{{ countryCtrl.selected.altSpellings.join(', ') }}
+				</td>
+			</tr>
+			<tr>
+				<th>Region</th>
+				<td>{{ countryCtrl.selected.region }}</td>
+			</tr>
+			<tr>
+				<th>Sub-region</th>
+				<td>{{ countryCtrl.selected.subregion }}</td>
+			</tr>
+			<tr>
+				<th>Population</th>
+				<td>{{ countryCtrl.selected.subregion }}</td>
+			</tr>
+			<tr>
+				<th>Lat/Lng</th>
+				<td>{{ countryCtrl.selected.latlng.join(', ') }}</td>
+			</tr>
+			<tr>
+				<th>Timezone(s)</th>
+				<td>
+					{{ countryCtrl.selected.timezones.join(', ') }}
+				</td>
+			</tr>
+			<tr>
+				<th>Borders</th>
+				<td>
+					{{ countryCtrl.selected.borders.join(', ') }}
+				</td>
+			</tr>
+			<tr>
+				<th>Native Name</th>
+				<td>
+					{{ countryCtrl.selected.nativeName }}
+				</td>
+			</tr>
+			<tr>
+				<th>Calling Code(s)</th>
+				<td>
+					{{ countryCtrl.selected.callingCodes.join(', ') }}
+				</td>
+			</tr>
+			<tr>
+				<th>Currencies</th>
+				<td>
+					<p ng-repeat="currency in countryCtrl.selected.currencies">{{ currency }}</p>
+				</td>
+			</tr>
+		</table>
+</div>

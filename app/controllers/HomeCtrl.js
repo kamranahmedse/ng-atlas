@@ -1,16 +1,25 @@
 app.controller('HomeCtrl', ['$scope', '$state', 'Country', function ( $scope, $state, Country ) {
 
-	var home = this;
+	var homeCtrl = this,
+		countryName = $state.params.name;
 
-	home.search = {};
-	home.search.countries = Country.countries;
+	homeCtrl.search = {};
+	homeCtrl.search.countries = Country.countries;
+
+	if ( countryName && !homeCtrl.search.selected ) {
+		homeCtrl.search.selected = {};
+		homeCtrl.search.selected.name = countryName;
+	};
 
 	/**
 	 * Gets the country detail through the restcountries.eu API
 	 * @param  {string} country The name of country
 	 * @return {null}
 	 */
-	home.loadCountry = function ( country ) {
+	homeCtrl.loadCountry = function ( country ) {
+
+		Country.selectedName = country.name;
+
 		$state.go('index.country', { 
 			name	: country.name 
 		});

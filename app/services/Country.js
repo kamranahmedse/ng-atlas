@@ -1,6 +1,7 @@
 app.service('Country', ['$q', '$http', function ($q, $http) {
 
-    var country = this;
+    var country = this,
+        cached = {};
 
     country.countries = [ // Taken from https://gist.github.com/unceus/6501985
         {name: 'Afghanistan', code: 'AF'},
@@ -243,7 +244,6 @@ app.service('Country', ['$q', '$http', function ($q, $http) {
         {name: 'Zambia', code: 'ZM'},
         {name: 'Zimbabwe', code: 'ZW'}
     ];
-
 
     country.getDetail = function ( name ) {
         var q = $q.defer();
