@@ -1,5 +1,30 @@
 # Angular Atlas
 
-An Angular JS application to let you tour around the globe :globe_with_meridians:
 
-There is not much going on here but I urge you to come back later, probably by the next weekend ;)
+## What is it?
+
+It is a simple weekend project that I developed in order to quickly jolt my Angular JS knowlege of a few things. You can search a country and get several details regarding the country and check the map.
+
+## What is it made of?
+
+The app uses the following:
+
+- v1.4.7 of [Angular JS](https://github.com/angular/angular.js)
+- [ui-router](https://github.com/angular-ui/ui-router) is being used for routing. 
+- [Twitter Bootstrap](https://github.com/twbs/bootstrap) for the interface.
+- [Angular Google Maps](https://angular-ui.github.io/angular-google-maps/#!/) for the map
+
+## What does it contain?
+
+There are a few controllers, some nested views, a service, an HTTP Interceptor and a directive for the loader.
+
+## How does it look like?
+
+![Detail page](http://i.imgur.com/dzAbvLM.png)
+![Map Page](http://i.imgur.com/IOfMPzV.png)
+
+## What is missing?
+
+The dependencies should have been installed through bower, I should have wrote some gulp tasks for minifying and combining those numerous Javascript files. But I was Okay with it as long as it served the purpose and it did.
+
+What else is missing, what other problems does it have? I would love to hear from you. Feel free to open any issues or reach me directly at kamranahmed.se@gmail.com
