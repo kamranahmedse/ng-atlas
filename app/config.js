@@ -1,6 +1,7 @@
 app.config(function ( $stateProvider, $urlRouterProvider ) {
 
- 	$urlRouterProvider.otherwise("/index");
+	// If no matching route is found
+ 	$urlRouterProvider.otherwise("/otherwise");
 
 	$stateProvider
 		.state('index', {
@@ -32,5 +33,9 @@ app.config(function ( $stateProvider, $urlRouterProvider ) {
 			url: "/about",
 			controller: 'ExploreCtrl as aboutCtrl',
 			templateUrl: 'views/about.html'
+		})
+		.state('otherwise', {
+			url: "/otherwise",
+			templateUrl: 'views/404.html'
 		});
 });

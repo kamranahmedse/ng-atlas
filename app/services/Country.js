@@ -3,6 +3,9 @@ app.service('Country', ['$q', '$http', function ($q, $http) {
     var country = this,
         cached = {};
 
+    /**
+     * @todo Put this in some external source
+     */
     country.countries = [ // Taken from https://gist.github.com/unceus/6501985
         {name: 'Afghanistan', code: 'AF'},
         {name: 'Åland Islands', code: 'AX'},
@@ -245,10 +248,17 @@ app.service('Country', ['$q', '$http', function ($q, $http) {
         {name: 'Zimbabwe', code: 'ZW'}
     ];
 
+    /**
+     * Gets the country detail from the API
+     * @param  {string} name The name of country
+     * @return               Promise is returned
+     */
     country.getDetail = function ( name ) {
         var q = $q.defer();
 
         $http({
+            // URL should have been retrievied through some config file etc
+            // Leaving it here though
             url: 'https://restcountries.eu/rest/v1/name/' + name + '?fullText=true',
             method: 'get'
         }).success(function( data, status, headers, config ){

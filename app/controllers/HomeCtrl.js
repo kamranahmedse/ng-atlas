@@ -6,6 +6,7 @@ app.controller('HomeCtrl', ['$scope', '$state', 'Country', function ( $scope, $s
 	homeCtrl.search = {};
 	homeCtrl.search.countries = Country.countries;
 
+	// If the user reached this page through URL directly
 	if ( countryName && !homeCtrl.search.selected ) {
 		homeCtrl.search.selected = {};
 		homeCtrl.search.selected.name = countryName;
@@ -20,6 +21,7 @@ app.controller('HomeCtrl', ['$scope', '$state', 'Country', function ( $scope, $s
 
 		Country.selectedName = country.name;
 
+		// Redirect to the country detail page
 		$state.go('index.country', { 
 			name	: country.name 
 		});
