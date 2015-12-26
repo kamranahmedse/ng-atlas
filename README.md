@@ -1,6 +1,6 @@
 # Angular Atlas
 
-Check the demo online: http://ng-atlas.herokuapp.com/
+Demo: http://ng-atlas.herokuapp.com/
 
 ## What is it?
 
